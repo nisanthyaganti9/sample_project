@@ -1,0 +1,33 @@
+<div class="container">
+  <h1> Sign Up </h1>
+  <p> You already have an account? <strong><%= link_to "Sign In", existing_user_users_path %></strong> </p>
+  <%= form_for @user, {url: users_path} do |f| %>
+    <div>
+      <%= f.label "First Name" %>
+      <%= f.text_field :first_name, required: true %>
+    </div>
+    <div>
+      <%= f.label "Last name" %>
+      <%= f.text_field :last_name, required: true %>
+    </div>
+    <div>
+      <%= f.label "DOB" %>
+      <%= f.date_field :dob, required: true %>
+    </div>
+    <div>
+      <%= f.label "Email" %>
+      <%= f.email_field :email, required: true %>
+    </div>
+    <div>
+      <%= f.label "Upload Profile Picture" %>
+      <%= f.file_field :profile_picture, required: true %>
+    </div>
+    <div>
+      <%= f.label "Password" %>
+      <%= f.password_field :password, required: true %>
+    </div>
+    <div>
+      <%= f.submit "Sign Up", class: "button" %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,18 @@
+<div class="container">
+  <h1> Sign In </h1>
+
+  <%= form_tag(sign_in_users_path) do %>
+    <div>
+      <%= label_tag "Email" %>
+      <%= email_field_tag :email, "", required: true %>
+    </div>
+    <div>
+      <%= label_tag "Password" %>
+      <%= password_field_tag :password, "", required: true %>
+    </div>
+    <div>
+      <%= submit_tag "Sign In", class: "button" %>
+      <%= link_to "Back", new_user_path, class: "button" %>
+    </div>
+  <% end %>
+</div>

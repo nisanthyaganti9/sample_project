@@ -1,0 +1,10 @@
+<div class="container">
+  <h1> Personal Information </h1>
+  <p>Full name: <strong><%= @user.first_name + " " + @user.last_name %></strong> </p> 
+  <%= image_tag(@user.profile_picture_url.to_s) %>
+  <p>Email: <strong><%= @user.email %></strong></p>
+  <p>DOB: <strong><%= @user.dob %></strong></p>
+
+  <%= link_to "Update Information", edit_user_path(@user), class: "button" %>
+  <%= link_to "Sign Out", new_user_path, class: "button" %>
+</div>

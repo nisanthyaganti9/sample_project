@@ -1,0 +1,34 @@
+<div class="container">
+  <h1> Edit Info </h1>
+
+  <%= form_for @user, url: user_path(@user) do |f| %>
+    <div>
+      <%= f.label "First Name" %>
+      <%= f.text_field :first_name, required: true %>
+    </div>
+    <div>
+      <%= f.label "Last name" %>
+      <%= f.text_field :last_name, required: true %>
+    </div>
+    <div>
+      <%= f.label "DOB" %>
+      <%= f.date_field :dob, required: true %>
+    </div>
+    <div>
+      <%= f.label "Email" %>
+      <%= f.email_field :email, required: true %>
+    </div>
+    <div>
+      <%= f.label "Upload New Profile Picture" %>
+      <%= f.file_field :profile_picture %>
+      <%= image_tag(@user.profile_picture_url.to_s) %>
+    </div>
+    <div>
+      <%= link_to "Change Password", change_password_user_path(@user), class: "button" %>
+      <%= f.submit "Update", class: "button" %><br />
+    </div>
+    <div>
+      <%= link_to "Back", user_path(@user), class: "button" %>
+    </div>
+  <% end %>
+</div>

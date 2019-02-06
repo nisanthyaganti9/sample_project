@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+
+
+.button {
+  background-color: white;
+  border: 2px solid #4CAF50;
+  color: black;;
+  padding: 3px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.container {
+  border-radius: 25px;
+  border: 2px solid #73AD21;
+  padding: 100px;
+  padding-top: 20px;
+  width: 350px;
+  height: 400px;
+}
+
+div {
+  padding: 3px;
+}
