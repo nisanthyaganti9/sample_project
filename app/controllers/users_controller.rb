@@ -37,7 +37,7 @@ class UsersController < ApplicationController
 
   def sign_in
     @user = User.where(email: params[:email]).first
-    if @user.authenticate(params[:password])
+    if @user && @user.authenticate(params[:password])
       redirect_to user_path(@user)
     else
       flash[:error] = "User Email/Password not matched"
